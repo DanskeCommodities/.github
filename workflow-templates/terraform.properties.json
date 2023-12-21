@@ -1,0 +1,8 @@
+{
+  "name": "Terraform workflow",
+  "description": "Execute terraform for plan and apply",
+  "iconName": "example-icon",
+  "categories": [
+      "Terraform"
+  ]
+}
