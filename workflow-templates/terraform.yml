@@ -1,8 +1,6 @@
 name: Terraform workflow
-description: Runs terraform plan and apply based on labels and PR
 
 on:
-  # Only trigger if changes to terraform files
   pull_request:
     paths:
       - 'terraform/**'
@@ -27,9 +25,10 @@ on:
       - 'terraform/**'
   
 jobs:
-  uses: ./.github/workflows/terraform.yml
-  with:
-    project_name: bifrost-core
-    environment: ${{ inputs.environment }}
-    jobtype: ${{ inputs.jobtype }}
-    workflow-version: main
+  terraform:
+    uses: ./.github/workflows/terraform.yml
+    with:
+      project_name: bifrost-core
+      environment: ${{ inputs.environment }}
+      jobtype: ${{ inputs.jobtype }}
+      workflow-version: main
