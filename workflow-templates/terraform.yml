@@ -26,7 +26,7 @@ on:
   
 jobs:
   terraform:
-    uses: ./.github/workflows/terraform.yml
+    uses: bifrost-gha/.github/workflows/terraform.yml@main
     with:
       project_name: bifrost-core
       environment: ${{ inputs.environment }}
